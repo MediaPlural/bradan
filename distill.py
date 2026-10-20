@@ -621,9 +621,12 @@ def main():
 
     # ---- human render
     mode = ("ollama " + llm_info["model"]) if llm_info else "stdlib fallback"
+    title = os.path.basename(os.path.abspath(a.in_dir))
+    if title in ("transcripts", ".", ""):
+        title = os.path.basename(os.path.dirname(os.path.abspath(a.in_dir)))
     total_words = sum(len(s["text"].split()) for s in srcs)
     dur_total = sum(s["dur_s"] or 0 for s in srcs)
-    lines = [f"# Course Map: {os.path.basename(os.path.abspath(a.in_dir))}", "",
+    lines = [f"# Course Map: {title}", "",
              f"- Sources: {len(srcs)}", f"- Total words: {total_words}",
              f"- Total audio duration: {round(dur_total/60, 1)} min",
              f"- Distillation: {mode}", ""]

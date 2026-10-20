@@ -9,5 +9,6 @@ venv/
 extracted/
 transcripts/
 distilled/
+.distill-cache.json
 site/
 trials.json

@@ -52,18 +52,23 @@ TOOLS = [
         "name": "distill",
         "inputSchema": {
             "type": "object",
-            "description": "Distill a directory of transcripts into keywords, concepts, "
-                            "next-best-sentence seeds, and a course map.",
+            "description": "Distill a directory of transcripts into a typed concept graph, "
+                            "course synthesis (takeaways, caveats, decision notes), and a "
+                            "course map. Uses local ollama when reachable; stdlib fallback "
+                            "otherwise.",
             "properties": {
                 "in_dir": {"type": "string", "description": "directory of transcripts"},
                 "out_dir": {"type": "string"},
                 "top_k": {"type": "integer", "description": "keywords to keep (default 200)"},
+                "llm": {"type": "string", "enum": ["auto", "ollama", "none"],
+                        "description": "engine (default auto)"},
+                "model": {"type": "string", "description": "ollama model (default qwen3.5:4b)"},
             },
             "secrets": [],
             "required": ["in_dir"],
         },
-        "description": "Distill a directory of transcripts into keywords, concepts, "
-                       "next-best-sentence seeds, and a course map.",
+        "description": "Distill a directory of transcripts into a typed concept graph, "
+                       "course synthesis, and a course map.",
     },
     {
         "name": "source",
@@ -117,6 +122,10 @@ def call_tool(name, args):
             cmd += ["--out-dir", args["out_dir"]]
         if args.get("top_k"):
             cmd += ["--top-k", str(args["top_k"])]
+        if args.get("llm"):
+            cmd += ["--llm", args["llm"]]
+        if args.get("model"):
+            cmd += ["--model", args["model"]]
     elif name == "source":
         cmd = ["python3", os.path.join(HERE, "source.py"), args["source"]]
         if args.get("workspace"):

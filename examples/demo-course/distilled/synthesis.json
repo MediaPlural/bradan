@@ -1,0 +1,85 @@
+{
+  "schema": "synthesis/bradan-v1",
+  "generated_at": 1792525452,
+  "provenance": {
+    "sources": [
+      {
+        "name": "l01_what_is_the_trust_funnel.transcript.json",
+        "sha256": "8773c110ae290a60f2d7030c5a5f268e2c6b8d8c36616bf31b0031217067fecd",
+        "words": 200
+      },
+      {
+        "name": "l02_verified_identity_setup.transcript.json",
+        "sha256": "83c02be59e70f9ae08e54d478b6d4b41f1c364b46f7836c9beba5bd2614e1545",
+        "words": 225
+      },
+      {
+        "name": "l03_tip_tiers_and_widget.transcript.json",
+        "sha256": "2c354f469e6706155e19737fafab5e81db6b806fab31c2aa138ea94be51a9c90",
+        "words": 220
+      },
+      {
+        "name": "l04_supporter_loop.transcript.json",
+        "sha256": "30f5633fd7cce175ff3237487db061f75d27354461087bdcb654902ace318ae0",
+        "words": 254
+      }
+    ],
+    "llm": {
+      "mode": "ollama",
+      "url": "http://localhost:11434",
+      "model": "qwen3.5:4b",
+      "prompt_version": "distill-chunk/v1",
+      "synth_version": "distill-synthesis/v1"
+    },
+    "failed_chunks": [],
+    "generated_by": "bradan/distill.py"
+  },
+  "summary": "This course teaches creators to replace transactional sales funnels with a trust-based supporter loop where verified identities and friction create genuine relationships rather than immediate revenue extraction. It fundamentally changes how you build by prioritizing identity verification and personalized gratitude mechanics over automated payment processing speed, ensuring that every interaction earns the right to future support.",
+  "learning_path": [
+    "attention page",
+    "verified identity",
+    "trust funnel",
+    "first tip",
+    "supporter loop",
+    "tip tiers",
+    "custom amounts",
+    "whales",
+    "tip with message",
+    "personal thank you",
+    "friction as signal",
+    "tiered coverage strategy"
+  ],
+  "takeaways": [
+    "The trust funnel converts better over time because it drives toward decisions the supporter feels good about.",
+    "Almost all revenue lives within the supporter loop rather than at the initial transaction point.",
+    "Every mechanic in this course is derived from the principle of earning trust before asking for money.",
+    "Verified identity is the foundational prerequisite for all trust funnel mechanics.",
+    "Tips function as bets on a person, making human verification essential for conversion.",
+    "Anonymous pages fail because trust cannot compound without verified identities.",
+    "The 20% creator drop at verification is acceptable if it prevents churn at payout setup.",
+    "Tip tiers convert better than blank custom fields because they eliminate the work of inventing an amount.",
+    "You must offer custom amounts above the top tier to avoid losing high-value whale donors.",
+    "Adding a message field transforms a transaction into the beginning of a relationship.",
+    "Never charge extra for the message field, as any cost will stop people from writing notes.",
+    "The supporter loop is the central mechanism for converting tips into long-term trust.",
+    "Personal thank-you notes must be handwritten and sent within twenty-four hours to be effective.",
+    "Effort in communication acts as a stronger signal of gratitude than speed or automation.",
+    "You do not need to reply to every single supporter, only those who matter most."
+  ],
+  "core_caveats": [
+    "Verification creates significant friction causing roughly 20% of creators to churn during signup.",
+    "Anonymous tipping pages fail because trust cannot compound without verified identities.",
+    "Hiding custom amount fields entirely or capping maximums causes you to lose whale donors who represent disproportionate revenue.",
+    "Replying to every single supporter at scale breaks the loop; selective coverage is required.",
+    "Automated receipts are necessary for transactions but must never replace handwritten personal thank-you notes.",
+    "Adding friction applies specifically to gratitude signals, not to payment processing speed."
+  ],
+  "decision_notes": [
+    "Identity verification must be the first screen encountered, not a bolted-on feature added later.",
+    "Implement preset tip tiers as the default mechanism to maximize conversion rates for median supporters.",
+    "Always include an optional message field and keep it free to encourage relationship building.",
+    "Structure your widget so custom amounts remain accessible but are positioned above the highest tier to capture whales.",
+    "Prioritize features that deepen the supporter loop over those that merely speed up payments.",
+    "Focus resources on creating a perception of coverage among key supporters rather than attempting total volume."
+  ]
+}

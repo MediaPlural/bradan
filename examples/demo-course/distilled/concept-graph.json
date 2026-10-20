@@ -1,0 +1,438 @@
+{
+  "schema": "concept-graph/bradan-v1",
+  "generated_at": 1792525452,
+  "provenance": {
+    "sources": [
+      {
+        "name": "l01_what_is_the_trust_funnel.transcript.json",
+        "sha256": "8773c110ae290a60f2d7030c5a5f268e2c6b8d8c36616bf31b0031217067fecd",
+        "words": 200
+      },
+      {
+        "name": "l02_verified_identity_setup.transcript.json",
+        "sha256": "83c02be59e70f9ae08e54d478b6d4b41f1c364b46f7836c9beba5bd2614e1545",
+        "words": 225
+      },
+      {
+        "name": "l03_tip_tiers_and_widget.transcript.json",
+        "sha256": "2c354f469e6706155e19737fafab5e81db6b806fab31c2aa138ea94be51a9c90",
+        "words": 220
+      },
+      {
+        "name": "l04_supporter_loop.transcript.json",
+        "sha256": "30f5633fd7cce175ff3237487db061f75d27354461087bdcb654902ace318ae0",
+        "words": 254
+      }
+    ],
+    "llm": {
+      "mode": "ollama",
+      "url": "http://localhost:11434",
+      "model": "qwen3.5:4b",
+      "prompt_version": "distill-chunk/v1",
+      "synth_version": "distill-synthesis/v1"
+    },
+    "failed_chunks": [],
+    "generated_by": "bradan/distill.py"
+  },
+  "nodes": [
+    {
+      "id": "c_a690f32bcf",
+      "name": "supporter loop",
+      "count": 3,
+      "definition": "the recurring cycle where supporters return and generate the majority of revenue",
+      "sources": [
+        "l01_what_is_the_trust_funnel.transcript.json",
+        "l03_tip_tiers_and_widget.transcript.json",
+        "l04_supporter_loop.transcript.json"
+      ],
+      "chunks": [
+        "8773c110ae290a60f2d7030c5a5f268e2c6b8d8c36616bf31b0031217067fecd",
+        "2c354f469e6706155e19737fafab5e81db6b806fab31c2aa138ea94be51a9c90",
+        "30f5633fd7cce175ff3237487db061f75d27354461087bdcb654902ace318ae0"
+      ]
+    },
+    {
+      "id": "c_f155315aea",
+      "name": "trust funnel",
+      "count": 1,
+      "definition": "a sequence where every step exists only to earn the right to the next step",
+      "sources": [
+        "l01_what_is_the_trust_funnel.transcript.json"
+      ],
+      "chunks": [
+        "8773c110ae290a60f2d7030c5a5f268e2c6b8d8c36616bf31b0031217067fecd"
+      ]
+    },
+    {
+      "id": "c_a51f4f16f7",
+      "name": "sales funnel",
+      "count": 1,
+      "definition": "a process that drives toward a transaction rather than building long-term trust",
+      "sources": [
+        "l01_what_is_the_trust_funnel.transcript.json"
+      ],
+      "chunks": [
+        "8773c110ae290a60f2d7030c5a5f268e2c6b8d8c36616bf31b0031217067fecd"
+      ]
+    },
+    {
+      "id": "c_62c48fdd15",
+      "name": "attention page",
+      "count": 1,
+      "definition": "the stage where a stranger decides whether you are real",
+      "sources": [
+        "l01_what_is_the_trust_funnel.transcript.json"
+      ],
+      "chunks": [
+        "8773c110ae290a60f2d7030c5a5f268e2c6b8d8c36616bf31b0031217067fecd"
+      ]
+    },
+    {
+      "id": "c_de5bf517e5",
+      "name": "first tip",
+      "count": 1,
+      "definition": "the point where a follower becomes a supporter with a small amount of money",
+      "sources": [
+        "l01_what_is_the_trust_funnel.transcript.json"
+      ],
+      "chunks": [
+        "8773c110ae290a60f2d7030c5a5f268e2c6b8d8c36616bf31b0031217067fecd"
+      ]
+    },
+    {
+      "id": "c_f8285c1d78",
+      "name": "verified identity",
+      "count": 1,
+      "definition": "proof that a user is a real human provided via World ID orb check",
+      "sources": [
+        "l02_verified_identity_setup.transcript.json"
+      ],
+      "chunks": [
+        "83c02be59e70f9ae08e54d478b6d4b41f1c364b46f7836c9beba5bd2614e1545"
+      ]
+    },
+    {
+      "id": "c_97380187a8",
+      "name": "tip",
+      "count": 1,
+      "definition": "a monetary bet placed on a specific person rather than their content",
+      "sources": [
+        "l02_verified_identity_setup.transcript.json"
+      ],
+      "chunks": [
+        "83c02be59e70f9ae08e54d478b6d4b41f1c364b46f7836c9beba5bd2614e1545"
+      ]
+    },
+    {
+      "id": "c_6177d948c4",
+      "name": "anonymous tipping pages",
+      "count": 1,
+      "definition": "pages where anyone can create an account instantly without identity verification",
+      "sources": [
+        "l02_verified_identity_setup.transcript.json"
+      ],
+      "chunks": [
+        "83c02be59e70f9ae08e54d478b6d4b41f1c364b46f7836c9beba5bd2614e1545"
+      ]
+    },
+    {
+      "id": "c_00652cb07b",
+      "name": "friction at signup",
+      "count": 1,
+      "definition": "the difficulty or delay introduced when requiring users to complete identity verification",
+      "sources": [
+        "l02_verified_identity_setup.transcript.json"
+      ],
+      "chunks": [
+        "83c02be59e70f9ae08e54d478b6d4b41f1c364b46f7836c9beba5bd2614e1545"
+      ]
+    },
+    {
+      "id": "c_67d7c8141a",
+      "name": "churn at payout setup",
+      "count": 1,
+      "definition": "users leaving the platform before they receive their first payment",
+      "sources": [
+        "l02_verified_identity_setup.transcript.json"
+      ],
+      "chunks": [
+        "83c02be59e70f9ae08e54d478b6d4b41f1c364b46f7836c9beba5bd2614e1545"
+      ]
+    },
+    {
+      "id": "c_bdb3abc403",
+      "name": "tip tiers",
+      "count": 1,
+      "definition": "named preset amounts that reduce friction by removing the need for supporters to invent a number",
+      "sources": [
+        "l03_tip_tiers_and_widget.transcript.json"
+      ],
+      "chunks": [
+        "2c354f469e6706155e19737fafab5e81db6b806fab31c2aa138ea94be51a9c90"
+      ]
+    },
+    {
+      "id": "c_718663b63b",
+      "name": "fixed tiers",
+      "count": 1,
+      "definition": "a specific set of preset amounts designed to convert better than blank custom fields because they eliminate decision paralysis",
+      "sources": [
+        "l03_tip_tiers_and_widget.transcript.json"
+      ],
+      "chunks": [
+        "2c354f469e6706155e19737fafab5e81db6b806fab31c2aa138ea94be51a9c90"
+      ]
+    },
+    {
+      "id": "c_b1dcf4975d",
+      "name": "custom amounts",
+      "count": 1,
+      "definition": "open-ended input fields that allow supporters to specify any value but require more cognitive effort from the user",
+      "sources": [
+        "l03_tip_tiers_and_widget.transcript.json"
+      ],
+      "chunks": [
+        "2c354f469e6706155e19737fafab5e81db6b806fab31c2aa138ea94be51a9c90"
+      ]
+    },
+    {
+      "id": "c_128afc1f78",
+      "name": "whales",
+      "count": 1,
+      "definition": "generous donors who are disproportionately represented in revenue and should be allowed to bypass preset limits",
+      "sources": [
+        "l03_tip_tiers_and_widget.transcript.json"
+      ],
+      "chunks": [
+        "2c354f469e6706155e19737fafab5e81db6b806fab31c2aa138ea94be51a9c90"
+      ]
+    },
+    {
+      "id": "c_b9fca27070",
+      "name": "tip with message",
+      "count": 1,
+      "definition": "a tipping action that includes a note field, serving as the seed for building a relationship rather than just a transaction",
+      "sources": [
+        "l03_tip_tiers_and_widget.transcript.json"
+      ],
+      "chunks": [
+        "2c354f469e6706155e19737fafab5e81db6b806fab31c2aa138ea94be51a9c90"
+      ]
+    },
+    {
+      "id": "c_c841c363af",
+      "name": "personal thank you",
+      "count": 1,
+      "definition": "a handwritten message sent within twenty-four hours by name that builds relationship rather than just recording a transaction",
+      "sources": [
+        "l04_supporter_loop.transcript.json"
+      ],
+      "chunks": [
+        "30f5633fd7cce175ff3237487db061f75d27354461087bdcb654902ace318ae0"
+      ]
+    },
+    {
+      "id": "c_5d3f994a02",
+      "name": "friction as signal",
+      "count": 1,
+      "definition": "the intentional delay in replying to create effort which signals genuine gratitude and strengthens the supporter relationship",
+      "sources": [
+        "l04_supporter_loop.transcript.json"
+      ],
+      "chunks": [
+        "30f5633fd7cce175ff3237487db061f75d27354461087bdcb654902ace318ae0"
+      ]
+    },
+    {
+      "id": "c_9f932cef6f",
+      "name": "payment rails",
+      "count": 1,
+      "definition": "automated systems designed for speed and efficiency in processing financial transactions",
+      "sources": [
+        "l04_supporter_loop.transcript.json"
+      ],
+      "chunks": [
+        "30f5633fd7cce175ff3237487db061f75d27354461087bdcb654902ace318ae0"
+      ]
+    },
+    {
+      "id": "c_0e4d12aabb",
+      "name": "gratitude mechanics",
+      "count": 1,
+      "definition": "human-centric interactions that prioritize personal connection over instant automation",
+      "sources": [
+        "l04_supporter_loop.transcript.json"
+      ],
+      "chunks": [
+        "30f5633fd7cce175ff3237487db061f75d27354461087bdcb654902ace318ae0"
+      ]
+    },
+    {
+      "id": "c_ed366f77a0",
+      "name": "tiered coverage strategy",
+      "count": 1,
+      "definition": "replying to every first-time supporter and those above the median tier rather than attempting total coverage at scale",
+      "sources": [
+        "l04_supporter_loop.transcript.json"
+      ],
+      "chunks": [
+        "30f5633fd7cce175ff3237487db061f75d27354461087bdcb654902ace318ae0"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "attention page",
+      "to": "first tip",
+      "relation": "prerequisite",
+      "weight": 1,
+      "sources": [
+        "l01_what_is_the_trust_funnel.transcript.json"
+      ]
+    },
+    {
+      "from": "custom amounts",
+      "to": "tip tiers",
+      "relation": "contrasts",
+      "weight": 1,
+      "sources": [
+        "l03_tip_tiers_and_widget.transcript.json"
+      ]
+    },
+    {
+      "from": "first tip",
+      "to": "supporter loop",
+      "relation": "prerequisite",
+      "weight": 1,
+      "sources": [
+        "l01_what_is_the_trust_funnel.transcript.json"
+      ]
+    },
+    {
+      "from": "fixed tiers",
+      "to": "tip tiers",
+      "relation": "part-of",
+      "weight": 1,
+      "sources": [
+        "l03_tip_tiers_and_widget.transcript.json"
+      ]
+    },
+    {
+      "from": "fixed tiers",
+      "to": "custom amounts",
+      "relation": "supports",
+      "weight": 1,
+      "sources": [
+        "l03_tip_tiers_and_widget.transcript.json"
+      ]
+    },
+    {
+      "from": "friction as signal",
+      "to": "payment rails",
+      "relation": "contrasts",
+      "weight": 1,
+      "sources": [
+        "l04_supporter_loop.transcript.json"
+      ]
+    },
+    {
+      "from": "friction at signup",
+      "to": "churn at payout setup",
+      "relation": "derived-from",
+      "weight": 1,
+      "sources": [
+        "l02_verified_identity_setup.transcript.json"
+      ]
+    },
+    {
+      "from": "payment rails",
+      "to": "gratitude mechanics",
+      "relation": "contrasts",
+      "weight": 1,
+      "sources": [
+        "l04_supporter_loop.transcript.json"
+      ]
+    },
+    {
+      "from": "personal thank you",
+      "to": "friction as signal",
+      "relation": "derived-from",
+      "weight": 1,
+      "sources": [
+        "l04_supporter_loop.transcript.json"
+      ]
+    },
+    {
+      "from": "supporter loop",
+      "to": "personal thank you",
+      "relation": "part-of",
+      "weight": 1,
+      "sources": [
+        "l04_supporter_loop.transcript.json"
+      ]
+    },
+    {
+      "from": "tiered coverage strategy",
+      "to": "supporter loop",
+      "relation": "supports",
+      "weight": 1,
+      "sources": [
+        "l04_supporter_loop.transcript.json"
+      ]
+    },
+    {
+      "from": "tip with message",
+      "to": "supporter loop",
+      "relation": "prerequisite",
+      "weight": 1,
+      "sources": [
+        "l03_tip_tiers_and_widget.transcript.json"
+      ]
+    },
+    {
+      "from": "trust funnel",
+      "to": "sales funnel",
+      "relation": "contrasts",
+      "weight": 1,
+      "sources": [
+        "l01_what_is_the_trust_funnel.transcript.json"
+      ]
+    },
+    {
+      "from": "trust funnel",
+      "to": "supporter loop",
+      "relation": "derived-from",
+      "weight": 1,
+      "sources": [
+        "l01_what_is_the_trust_funnel.transcript.json"
+      ]
+    },
+    {
+      "from": "verified identity",
+      "to": "tip",
+      "relation": "prerequisite",
+      "weight": 1,
+      "sources": [
+        "l02_verified_identity_setup.transcript.json"
+      ]
+    },
+    {
+      "from": "verified identity",
+      "to": "anonymous tipping pages",
+      "relation": "contrasts",
+      "weight": 1,
+      "sources": [
+        "l02_verified_identity_setup.transcript.json"
+      ]
+    },
+    {
+      "from": "whales",
+      "to": "custom amounts",
+      "relation": "derived-from",
+      "weight": 1,
+      "sources": [
+        "l03_tip_tiers_and_widget.transcript.json"
+      ]
+    }
+  ]
+}

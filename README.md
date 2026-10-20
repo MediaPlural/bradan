@@ -20,7 +20,9 @@ The core (this repo) is deliberately **stdlib-only + one STT dependency**. Every
 ```
 acquire (scrape.py)       → media + acquisition.json (url, sha256, tool, timestamp)
 transcribe (transcribe.py) → <stem>.transcript.json + .txt + .srt + .sha256
-distill (distill.py)      → keywords.json + concepts.json + next-best-seeds.json + course-map.md
+distill (distill.py)      → concept-graph.json (typed nodes/edges) + synthesis.json (summary, takeaways,
+                            caveats, decision notes, learning path) + course-map.md
+                            (+ legacy keywords.json / concepts.json / next-best-seeds.json)
 assimilate (adapters)     → knowledge page / keyword lanes / render script  [HANDBOOK.md]
 ```
 
@@ -47,6 +49,9 @@ python3 transcribe.py ./course/media/lesson-01.m4a --out-dir ./course/transcript
 
 # 3. Distill the corpus
 python3 distill.py ./course/transcripts --out-dir ./course/distilled
+# deep pass: uses local ollama when reachable (default model qwen3.5:4b, override with --model);
+# chunk results are cached (.distill-cache.json, sha-keyed) so re-runs are free.
+# --llm none forces the stdlib-only fallback (same output schema, co-occurrence edges).
 
 # 4. Assimilate: feed the distilled corpus to your agent / knowledge base / renderer.
 #    (adapter recipes in HANDBOOK.md.)
@@ -77,7 +82,7 @@ bradan/
 ├── install.sh           # isolated venv setup
 ├── transcribe.py        # video/audio → word-timestamped transcript (+txt/srt/sha256)
 ├── scrape.py            # URL → media/page (yt-dlp / stdlib fetch) + acquisition manifest
-├── distill.py           # corpus → keywords/concepts/seeds/course-map
+├── distill.py           # corpus → concept graph + synthesis + course map (ollama deep pass, stdlib fallback)
 ├── consumer.py          # one-command wrapper: acquire → transcribe → distill
 ├── HANDBOOK.md          # adapter docs for other systems (knowledge base, renderer, keyword lanes)
 ├── mcp-server.py        # MCP server: tools = transcribe/scrape/distill/status (agents drive it)

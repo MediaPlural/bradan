@@ -1,0 +1,194 @@
+{
+  "seeds": [
+    {
+      "sentence": "The three stages are attention page, first tip, and supporter loop.",
+      "density": 0.64,
+      "words": 11
+    },
+    {
+      "sentence": "Reply to every first-time supporter and every tip above your median tier.",
+      "density": 0.62,
+      "words": 13
+    },
+    {
+      "sentence": "Everything in lesson three said remove friction.",
+      "density": 0.57,
+      "words": 7
+    },
+    {
+      "sentence": "Edge case: at scale you cannot reply to everyone.",
+      "density": 0.56,
+      "words": 9
+    },
+    {
+      "sentence": "Every mechanic we build in this course is derived from that one principle.",
+      "density": 0.54,
+      "words": 13
+    },
+    {
+      "sentence": "Conversion happens once and the loop never forms.",
+      "density": 0.5,
+      "words": 8
+    },
+    {
+      "sentence": "Lesson three, the tipping widget itself.",
+      "density": 0.5,
+      "words": 6
+    },
+    {
+      "sentence": "Identity has to be the first screen, because every downstream concept, the attention page, the first tip, the supporter loop, is derived from the badge being real.",
+      "density": 0.44,
+      "words": 27
+    },
+    {
+      "sentence": "A tip without one is a transaction.",
+      "density": 0.43,
+      "words": 7
+    },
+    {
+      "sentence": "The supporter loop is the cycle where a first tip leads to a thank you, the thank you leads to a reply, and the reply leads to a second tip.",
+      "density": 0.4,
+      "words": 30
+    },
+    {
+      "sentence": "The loop is the moat, and it is derived from every principle in this course, trust before ask, verified identity, and friction where friction belongs.",
+      "density": 0.4,
+      "words": 25
+    },
+    {
+      "sentence": "If the supporter cannot tell a human from a bot farm, the first tip never happens.",
+      "density": 0.38,
+      "words": 16
+    },
+    {
+      "sentence": "The edge case: custom amounts still matter, but only above the top tier.",
+      "density": 0.38,
+      "words": 13
+    },
+    {
+      "sentence": "The mechanic nobody teaches: thank supporters within twenty four hours, personally, by name.",
+      "density": 0.38,
+      "words": 13
+    },
+    {
+      "sentence": "The widget is the part of the attention page where money actually moves, and the mechanic that matters most is tip tiers.",
+      "density": 0.36,
+      "words": 22
+    },
+    {
+      "sentence": "Build the message field first, and never charge extra for it, because the moment it costs money nobody writes one.",
+      "density": 0.35,
+      "words": 20
+    },
+    {
+      "sentence": "So the first lesson is simple.",
+      "density": 0.33,
+      "words": 6
+    },
+    {
+      "sentence": "Before any tips exist, you need verified identity, because verified identity is the prerequisite for everything the trust funnel does later.",
+      "density": 0.33,
+      "words": 21
+    },
+    {
+      "sentence": "The first tip is where a follower becomes a supporter with a small amount of money.",
+      "density": 0.31,
+      "words": 16
+    },
+    {
+      "sentence": "A sales funnel drives toward a transaction.",
+      "density": 0.29,
+      "words": 7
+    },
+    {
+      "sentence": "The supporter loop is where a supporter comes back, and that loop is where almost all of the revenue actually lives.",
+      "density": 0.29,
+      "words": 21
+    },
+    {
+      "sentence": "Here is the edge case almost everyone misses: if your page asks for money before it earns trust, every downstream metric looks fine until it suddenly does not.",
+      "density": 0.29,
+      "words": 28
+    },
+    {
+      "sentence": "So tiers convert better than a blank custom field, and this is not ideology, it is measured across every tipping platform that publishes numbers.",
+      "density": 0.29,
+      "words": 24
+    },
+    {
+      "sentence": "Tip with message looks like a small feature but it is the seed of the supporter loop we cover next lesson.",
+      "density": 0.29,
+      "words": 21
+    },
+    {
+      "sentence": "Anonymous pages convert at launch and die within a month, because the trust never compounds.",
+      "density": 0.27,
+      "words": 15
+    },
+    {
+      "sentence": "So the rule is tiers for the median supporter, open field for the generous ones.",
+      "density": 0.27,
+      "words": 15
+    },
+    {
+      "sentence": "And friction in a thank you is exactly what you want.",
+      "density": 0.27,
+      "words": 11
+    },
+    {
+      "sentence": "The trust funnel is a sequence where every step exists only to earn the right to the next step.",
+      "density": 0.26,
+      "words": 19
+    },
+    {
+      "sentence": "The trust funnel drives toward a decision the supporter feels good about, which is why it converts better over time.",
+      "density": 0.25,
+      "words": 20
+    },
+    {
+      "sentence": "The attention page is where a stranger decides whether you are real.",
+      "density": 0.25,
+      "words": 12
+    },
+    {
+      "sentence": "What this changes about how you build: do not bolt verification on later as a feature flag.",
+      "density": 0.24,
+      "words": 17
+    },
+    {
+      "sentence": "A tip tier is a named preset amount with its own identity, like a three dollar espresso or a ten dollar latte.",
+      "density": 0.23,
+      "words": 22
+    },
+    {
+      "sentence": "Fixed tiers exist because choosing an amount is work, and work kills conversion.",
+      "density": 0.23,
+      "words": 13
+    },
+    {
+      "sentence": "The receipt is part of the transaction; the thank you is part of the relationship, and those are different artifacts that should never be the same email.",
+      "density": 0.22,
+      "words": 27
+    },
+    {
+      "sentence": "Verified identity contrasts with anonymous tipping pages, the kind where anyone can spin up a page in thirty seconds.",
+      "density": 0.21,
+      "words": 19
+    },
+    {
+      "sentence": "Verification adds friction, and friction at signup costs you roughly twenty percent of creators who would otherwise finish onboarding.",
+      "density": 0.21,
+      "words": 19
+    },
+    {
+      "sentence": "What this changes about how you decide: when you have to choose between a feature that speeds up payment and a feature that deepens the loop, choose the loop.",
+      "density": 0.21,
+      "words": 29
+    },
+    {
+      "sentence": "The loop does not require total coverage, it requires that the supporter believes coverage exists.",
+      "density": 0.2,
+      "words": 15
+    }
+  ]
+}

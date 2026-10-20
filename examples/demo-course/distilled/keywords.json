@@ -1,0 +1,1204 @@
+{
+  "keywords": [
+    {
+      "term": "supporter",
+      "tf": 15,
+      "documents": 4,
+      "score": 31.5
+    },
+    {
+      "term": "loop",
+      "tf": 12,
+      "documents": 4,
+      "score": 16.2
+    },
+    {
+      "term": "tip",
+      "tf": 13,
+      "documents": 4,
+      "score": 15.6
+    },
+    {
+      "term": "every",
+      "tf": 8,
+      "documents": 4,
+      "score": 12.0
+    },
+    {
+      "term": "first",
+      "tf": 8,
+      "documents": 4,
+      "score": 12.0
+    },
+    {
+      "term": "trust",
+      "tf": 8,
+      "documents": 3,
+      "score": 10.0
+    },
+    {
+      "term": "lesson",
+      "tf": 6,
+      "documents": 4,
+      "score": 9.9
+    },
+    {
+      "term": "identity",
+      "tf": 6,
+      "documents": 3,
+      "score": 9.75
+    },
+    {
+      "term": "page",
+      "tf": 7,
+      "documents": 3,
+      "score": 7.88
+    },
+    {
+      "term": "friction",
+      "tf": 6,
+      "documents": 2,
+      "score": 7.8
+    },
+    {
+      "term": "never",
+      "tf": 5,
+      "documents": 4,
+      "score": 7.5
+    },
+    {
+      "term": "attention",
+      "tf": 4,
+      "documents": 3,
+      "score": 7.0
+    },
+    {
+      "term": "funnel",
+      "tf": 6,
+      "documents": 2,
+      "score": 6.6
+    },
+    {
+      "term": "money",
+      "tf": 5,
+      "documents": 3,
+      "score": 6.25
+    },
+    {
+      "term": "feature",
+      "tf": 4,
+      "documents": 3,
+      "score": 6.0
+    },
+    {
+      "term": "transaction",
+      "tf": 3,
+      "documents": 3,
+      "score": 5.62
+    },
+    {
+      "term": "verified",
+      "tf": 4,
+      "documents": 2,
+      "score": 5.2
+    },
+    {
+      "term": "build",
+      "tf": 4,
+      "documents": 3,
+      "score": 5.0
+    },
+    {
+      "term": "three",
+      "tf": 4,
+      "documents": 3,
+      "score": 5.0
+    },
+    {
+      "term": "mechanic",
+      "tf": 3,
+      "documents": 3,
+      "score": 4.88
+    },
+    {
+      "term": "derived",
+      "tf": 3,
+      "documents": 3,
+      "score": 4.5
+    },
+    {
+      "term": "course",
+      "tf": 4,
+      "documents": 2,
+      "score": 4.4
+    },
+    {
+      "term": "one",
+      "tf": 4,
+      "documents": 3,
+      "score": 4.0
+    },
+    {
+      "term": "thank",
+      "tf": 5,
+      "documents": 1,
+      "score": 3.75
+    },
+    {
+      "term": "reply",
+      "tf": 5,
+      "documents": 1,
+      "score": 3.75
+    },
+    {
+      "term": "real",
+      "tf": 4,
+      "documents": 2,
+      "score": 3.6
+    },
+    {
+      "term": "tipping",
+      "tf": 3,
+      "documents": 2,
+      "score": 3.6
+    },
+    {
+      "term": "edge",
+      "tf": 3,
+      "documents": 3,
+      "score": 3.38
+    },
+    {
+      "term": "case",
+      "tf": 3,
+      "documents": 3,
+      "score": 3.38
+    },
+    {
+      "term": "verification",
+      "tf": 3,
+      "documents": 1,
+      "score": 3.38
+    },
+    {
+      "term": "amount",
+      "tf": 3,
+      "documents": 2,
+      "score": 3.3
+    },
+    {
+      "term": "downstream",
+      "tf": 2,
+      "documents": 2,
+      "score": 3.0
+    },
+    {
+      "term": "conversion",
+      "tf": 2,
+      "documents": 2,
+      "score": 3.0
+    },
+    {
+      "term": "everything",
+      "tf": 2,
+      "documents": 2,
+      "score": 3.0
+    },
+    {
+      "term": "tiers",
+      "tf": 4,
+      "documents": 1,
+      "score": 3.0
+    },
+    {
+      "term": "field",
+      "tf": 4,
+      "documents": 1,
+      "score": 3.0
+    },
+    {
+      "term": "relationship",
+      "tf": 2,
+      "documents": 2,
+      "score": 3.0
+    },
+    {
+      "term": "principle",
+      "tf": 2,
+      "documents": 2,
+      "score": 2.8
+    },
+    {
+      "term": "next",
+      "tf": 3,
+      "documents": 2,
+      "score": 2.7
+    },
+    {
+      "term": "want",
+      "tf": 3,
+      "documents": 2,
+      "score": 2.7
+    },
+    {
+      "term": "part",
+      "tf": 3,
+      "documents": 2,
+      "score": 2.7
+    },
+    {
+      "term": "tier",
+      "tf": 3,
+      "documents": 2,
+      "score": 2.7
+    },
+    {
+      "term": "payment",
+      "tf": 3,
+      "documents": 1,
+      "score": 2.7
+    },
+    {
+      "term": "decision",
+      "tf": 2,
+      "documents": 2,
+      "score": 2.6
+    },
+    {
+      "term": "actually",
+      "tf": 2,
+      "documents": 2,
+      "score": 2.6
+    },
+    {
+      "term": "everyone",
+      "tf": 2,
+      "documents": 2,
+      "score": 2.6
+    },
+    {
+      "term": "custom",
+      "tf": 3,
+      "documents": 1,
+      "score": 2.48
+    },
+    {
+      "term": "revenue",
+      "tf": 2,
+      "documents": 2,
+      "score": 2.4
+    },
+    {
+      "term": "happens",
+      "tf": 2,
+      "documents": 2,
+      "score": 2.4
+    },
+    {
+      "term": "convert",
+      "tf": 2,
+      "documents": 2,
+      "score": 2.4
+    },
+    {
+      "term": "changes",
+      "tf": 2,
+      "documents": 2,
+      "score": 2.4
+    },
+    {
+      "term": "leads",
+      "tf": 3,
+      "documents": 1,
+      "score": 2.25
+    },
+    {
+      "term": "exists",
+      "tf": 2,
+      "documents": 2,
+      "score": 2.2
+    },
+    {
+      "term": "better",
+      "tf": 2,
+      "documents": 2,
+      "score": 2.2
+    },
+    {
+      "term": "matter",
+      "tf": 2,
+      "documents": 2,
+      "score": 2.2
+    },
+    {
+      "term": "cannot",
+      "tf": 2,
+      "documents": 2,
+      "score": 2.2
+    },
+    {
+      "term": "within",
+      "tf": 2,
+      "documents": 2,
+      "score": 2.2
+    },
+    {
+      "term": "twenty",
+      "tf": 2,
+      "documents": 2,
+      "score": 2.2
+    },
+    {
+      "term": "median",
+      "tf": 2,
+      "documents": 2,
+      "score": 2.2
+    },
+    {
+      "term": "nobody",
+      "tf": 2,
+      "documents": 2,
+      "score": 2.2
+    },
+    {
+      "term": "anonymous",
+      "tf": 2,
+      "documents": 1,
+      "score": 2.1
+    },
+    {
+      "term": "automated",
+      "tf": 2,
+      "documents": 1,
+      "score": 2.1
+    },
+    {
+      "term": "small",
+      "tf": 2,
+      "documents": 2,
+      "score": 2.0
+    },
+    {
+      "term": "looks",
+      "tf": 2,
+      "documents": 2,
+      "score": 2.0
+    },
+    {
+      "term": "exist",
+      "tf": 2,
+      "documents": 2,
+      "score": 2.0
+    },
+    {
+      "term": "costs",
+      "tf": 2,
+      "documents": 2,
+      "score": 2.0
+    },
+    {
+      "term": "creators",
+      "tf": 2,
+      "documents": 1,
+      "score": 1.95
+    },
+    {
+      "term": "espresso",
+      "tf": 2,
+      "documents": 1,
+      "score": 1.95
+    },
+    {
+      "term": "coverage",
+      "tf": 2,
+      "documents": 1,
+      "score": 1.95
+    },
+    {
+      "term": "four",
+      "tf": 2,
+      "documents": 2,
+      "score": 1.8
+    },
+    {
+      "term": "good",
+      "tf": 2,
+      "documents": 2,
+      "score": 1.8
+    },
+    {
+      "term": "time",
+      "tf": 2,
+      "documents": 2,
+      "score": 1.8
+    },
+    {
+      "term": "fine",
+      "tf": 2,
+      "documents": 2,
+      "score": 1.8
+    },
+    {
+      "term": "lose",
+      "tf": 2,
+      "documents": 2,
+      "score": 1.8
+    },
+    {
+      "term": "message",
+      "tf": 2,
+      "documents": 1,
+      "score": 1.8
+    },
+    {
+      "term": "receipt",
+      "tf": 2,
+      "documents": 1,
+      "score": 1.8
+    },
+    {
+      "term": "drives",
+      "tf": 2,
+      "documents": 1,
+      "score": 1.65
+    },
+    {
+      "term": "toward",
+      "tf": 2,
+      "documents": 1,
+      "score": 1.65
+    },
+    {
+      "term": "almost",
+      "tf": 2,
+      "documents": 1,
+      "score": 1.65
+    },
+    {
+      "term": "widget",
+      "tf": 2,
+      "documents": 1,
+      "score": 1.65
+    },
+    {
+      "term": "dollar",
+      "tf": 2,
+      "documents": 1,
+      "score": 1.65
+    },
+    {
+      "term": "whales",
+      "tf": 2,
+      "documents": 1,
+      "score": 1.65
+    },
+    {
+      "term": "choose",
+      "tf": 2,
+      "documents": 1,
+      "score": 1.65
+    },
+    {
+      "term": "ask",
+      "tf": 2,
+      "documents": 2,
+      "score": 1.6
+    },
+    {
+      "term": "sales",
+      "tf": 2,
+      "documents": 1,
+      "score": 1.5
+    },
+    {
+      "term": "later",
+      "tf": 2,
+      "documents": 1,
+      "score": 1.5
+    },
+    {
+      "term": "human",
+      "tf": 2,
+      "documents": 1,
+      "score": 1.5
+    },
+    {
+      "term": "badge",
+      "tf": 2,
+      "documents": 1,
+      "score": 1.5
+    },
+    {
+      "term": "pages",
+      "tf": 2,
+      "documents": 1,
+      "score": 1.5
+    },
+    {
+      "term": "churn",
+      "tf": 2,
+      "documents": 1,
+      "score": 1.5
+    },
+    {
+      "term": "step",
+      "tf": 2,
+      "documents": 1,
+      "score": 1.35
+    },
+    {
+      "term": "work",
+      "tf": 2,
+      "documents": 1,
+      "score": 1.35
+    },
+    {
+      "term": "prerequisite",
+      "tf": 1,
+      "documents": 1,
+      "score": 1.12
+    },
+    {
+      "term": "onboarding",
+      "tf": 1,
+      "documents": 1,
+      "score": 1.12
+    },
+    {
+      "term": "disproportionate",
+      "tf": 1,
+      "documents": 1,
+      "score": 1.12
+    },
+    {
+      "term": "implementation",
+      "tf": 1,
+      "documents": 1,
+      "score": 1.12
+    },
+    {
+      "term": "supporters",
+      "tf": 1,
+      "documents": 1,
+      "score": 1.12
+    },
+    {
+      "term": "personally",
+      "tf": 1,
+      "documents": 1,
+      "score": 1.12
+    },
+    {
+      "term": "contradiction",
+      "tf": 1,
+      "documents": 1,
+      "score": 1.12
+    },
+    {
+      "term": "handwritten",
+      "tf": 1,
+      "documents": 1,
+      "score": 1.12
+    },
+    {
+      "term": "outperforms",
+      "tf": 1,
+      "documents": 1,
+      "score": 1.12
+    },
+    {
+      "term": "automation",
+      "tf": 1,
+      "documents": 1,
+      "score": 1.12
+    },
+    {
+      "term": "difference",
+      "tf": 1,
+      "documents": 1,
+      "score": 1.12
+    },
+    {
+      "term": "first-time",
+      "tf": 1,
+      "documents": 1,
+      "score": 1.12
+    },
+    {
+      "term": "contrasts",
+      "tf": 1,
+      "documents": 1,
+      "score": 1.05
+    },
+    {
+      "term": "compounds",
+      "tf": 1,
+      "documents": 1,
+      "score": 1.05
+    },
+    {
+      "term": "otherwise",
+      "tf": 1,
+      "documents": 1,
+      "score": 1.05
+    },
+    {
+      "term": "framework",
+      "tf": 1,
+      "documents": 1,
+      "score": 1.05
+    },
+    {
+      "term": "hesitates",
+      "tf": 1,
+      "documents": 1,
+      "score": 1.05
+    },
+    {
+      "term": "publishes",
+      "tf": 1,
+      "documents": 1,
+      "score": 1.05
+    },
+    {
+      "term": "beginning",
+      "tf": 1,
+      "documents": 1,
+      "score": 1.05
+    },
+    {
+      "term": "different",
+      "tf": 1,
+      "documents": 1,
+      "score": 1.05
+    },
+    {
+      "term": "artifacts",
+      "tf": 1,
+      "documents": 1,
+      "score": 1.05
+    },
+    {
+      "term": "gratitude",
+      "tf": 1,
+      "documents": 1,
+      "score": 1.05
+    },
+    {
+      "term": "sequence",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.98
+    },
+    {
+      "term": "converts",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.98
+    },
+    {
+      "term": "stranger",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.98
+    },
+    {
+      "term": "follower",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.98
+    },
+    {
+      "term": "suddenly",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.98
+    },
+    {
+      "term": "choosing",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.98
+    },
+    {
+      "term": "ideology",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.98
+    },
+    {
+      "term": "measured",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.98
+    },
+    {
+      "term": "platform",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.98
+    },
+    {
+      "term": "generous",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.98
+    },
+    {
+      "term": "opposite",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.98
+    },
+    {
+      "term": "requires",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.98
+    },
+    {
+      "term": "believes",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.98
+    },
+    {
+      "term": "welcome",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.9
+    },
+    {
+      "term": "lessons",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.9
+    },
+    {
+      "term": "decides",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.9
+    },
+    {
+      "term": "whether",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.9
+    },
+    {
+      "term": "becomes",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.9
+    },
+    {
+      "term": "creator",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.9
+    },
+    {
+      "term": "content",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.9
+    },
+    {
+      "term": "seconds",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.9
+    },
+    {
+      "term": "watched",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.9
+    },
+    {
+      "term": "roughly",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.9
+    },
+    {
+      "term": "percent",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.9
+    },
+    {
+      "term": "concept",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.9
+    },
+    {
+      "term": "matters",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.9
+    },
+    {
+      "term": "numbers",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.9
+    },
+    {
+      "term": "amounts",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.9
+    },
+    {
+      "term": "maximum",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.9
+    },
+    {
+      "term": "warning",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.9
+    },
+    {
+      "term": "without",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.9
+    },
+    {
+      "term": "heading",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.9
+    },
+    {
+      "term": "teaches",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.9
+    },
+    {
+      "term": "exactly",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.9
+    },
+    {
+      "term": "instant",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.9
+    },
+    {
+      "term": "require",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.9
+    },
+    {
+      "term": "deepens",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.9
+    },
+    {
+      "term": "belongs",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.9
+    },
+    {
+      "term": "stages",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.83
+    },
+    {
+      "term": "misses",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.83
+    },
+    {
+      "term": "metric",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.83
+    },
+    {
+      "term": "simple",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.83
+    },
+    {
+      "term": "person",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.83
+    },
+    {
+      "term": "anyone",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.83
+    },
+    {
+      "term": "thirty",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.83
+    },
+    {
+      "term": "launch",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.83
+    },
+    {
+      "term": "caveat",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.83
+    },
+    {
+      "term": "people",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.83
+    },
+    {
+      "term": "signup",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.83
+    },
+    {
+      "term": "finish",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.83
+    },
+    {
+      "term": "payout",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.83
+    },
+    {
+      "term": "anyway",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.83
+    },
+    {
+      "term": "accept",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.83
+    },
+    {
+      "term": "screen",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.83
+    },
+    {
+      "term": "itself",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.83
+    },
+    {
+      "term": "preset",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.83
+    },
+    {
+      "term": "invent",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.83
+    },
+    {
+      "term": "number",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.83
+    },
+    {
+      "term": "across",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.83
+    },
+    {
+      "term": "charge",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.83
+    },
+    {
+      "term": "moment",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.83
+    },
+    {
+      "term": "writes",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.83
+    },
+    {
+      "term": "second",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.83
+    },
+    {
+      "term": "remove",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.83
+    },
+    {
+      "term": "effort",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.83
+    },
+    {
+      "term": "signal",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.83
+    },
+    {
+      "term": "advice",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.83
+    },
+    {
+      "term": "decide",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.83
+    },
+    {
+      "term": "speeds",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.83
+    },
+    {
+      "term": "stakes",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.83
+    },
+    {
+      "term": "clear",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.75
+    },
+    {
+      "term": "right",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.75
+    },
+    {
+      "term": "feels",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.75
+    },
+    {
+      "term": "comes",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.75
+    },
+    {
+      "term": "lives",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.75
+    },
+    {
+      "term": "earns",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.75
+    },
+    {
+      "term": "until",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.75
+    },
+    {
+      "term": "forms",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.75
+    },
+    {
+      "term": "signs",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.75
+    },
+    {
+      "term": "prove",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.75
+    },
+    {
+      "term": "world",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.75
+    },
+    {
+      "term": "check",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.75
+    },
+    {
+      "term": "proof",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.75
+    },
+    {
+      "term": "shows",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.75
+    },
+    {
+      "term": "month",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.75
+    },
+    {
+      "term": "setup",
+      "tf": 1,
+      "documents": 1,
+      "score": 0.75
+    }
+  ]
+}

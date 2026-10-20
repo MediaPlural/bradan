@@ -118,7 +118,7 @@ def main():
     ap.add_argument("--out-dir", default="./acquired")
     ap.add_argument("--audio-only", action="store_true", help="video -> audio (smaller, enough for transcript)")
     ap.add_argument("--venv-python", default=os.environ.get(
-        "CONSUMER_VENV_PYTHON", os.path.expanduser("~/.hermes/venvs/consumer/bin/python")))
+        "BRADAN_VENV_PYTHON", os.path.expanduser("~/.hermes/venvs/bradan/bin/python")))
     a = ap.parse_args()
     os.makedirs(a.out_dir, exist_ok=True)
 

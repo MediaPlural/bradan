@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""consumer graph — the assimilated, queryable knowledge graph.
+"""bradan graph — the assimilated, queryable knowledge graph.
 
 The engine of enlightenment: everything consumed lands here — every chunk of
 text from every source (websites, zips, gdrive, courses, PDFs, transcripts,
@@ -441,7 +441,7 @@ def q_maths(db):
 def main():
     ap = argparse.ArgumentParser(description="The assimilated knowledge graph: search/semantic/filter/insight/maths")
     sub = ap.add_subparsers(dest="cmd", required=True)
-    default_db = os.environ.get("CONSUMER_GRAPH_DB", "consumer.graph.db")
+    default_db = os.environ.get("BRADAN_GRAPH_DB", "consumer.graph.db")
 
     p = sub.add_parser("ingest"); p.add_argument("corpus_dir")
     p.add_argument("--distilled", default=None)

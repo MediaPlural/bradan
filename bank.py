@@ -99,7 +99,7 @@ def auth_state(manifest):
         ok = r.returncode == 0 and (r.stdout or "").strip()
         return bool(ok), f"ortie:{acct} {'ready' if ok else 'no token'}"
     if m == "nango":
-        ok = bool(os.environ.get("CONSUMER_NANGO_URL") and os.environ.get("CONSUMER_NANGO_KEY"))
+        ok = bool(os.environ.get("BRADAN_NANGO_URL") and os.environ.get("BRADAN_NANGO_KEY"))
         return ok, "nango env " + ("set" if ok else "MISSING")
     if m == "keychain":
         service = manifest.get("keychain_service", "")

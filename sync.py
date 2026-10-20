@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""consumer sync — the other half of syncable-anywhere: import + merge.
+"""bradan sync — the other half of syncable-anywhere: import + merge.
 
 export.py pushes the graph out; sync.py brings graphs IN and merges them:
 
   python3 sync.py merge LEFT.db RIGHT.db --out merged.db
-      Merge two consumer graphs (union; chunk-level dedup by exact text
+      Merge two bradan graphs (union; chunk-level dedup by exact text
       hash; concepts re-canonicalized). Re-importing the same db is a no-op.
 
   python3 sync.py import-jsonl chunks.jsonl --db TARGET.db
@@ -125,7 +125,7 @@ def merge(left, right, out):
 def import_package(pkg_dir, target):
     gj = os.path.join(pkg_dir, "graph.json")
     if not os.path.exists(gj):
-        sys.exit(f"FATAL: {pkg_dir} has no graph.json — not a consumer package")
+        sys.exit(f"FATAL: {pkg_dir} has no graph.json — not a bradan package")
     # package -> temp jsonl -> import (one code path, honest formats)
     data = json.load(open(gj))
     tmp = os.path.join(os.path.dirname(target) or ".", ".pkg-import.jsonl")

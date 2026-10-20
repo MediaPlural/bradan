@@ -82,8 +82,8 @@ def process_file(path, db, workspace):
     # STT lane when needed
     for e in corpus["files"]:
         if e.get("needs_transcription"):
-            venv = os.environ.get("CONSUMER_VENV_PYTHON",
-                                 os.path.expanduser("~/.hermes/venvs/consumer/bin/python"))
+            venv = os.environ.get("BRADAN_VENV_PYTHON",
+                                 os.path.expanduser("~/.hermes/venvs/bradan/bin/python"))
             tdir = os.path.join(stage, "transcripts")
             os.makedirs(tdir, exist_ok=True)
             subprocess.run(["python3", os.path.join(HERE, "transcribe.py"), e["file"],

@@ -84,7 +84,7 @@ servers["consumer-mcp"] = {
     "type": "stdio",
     "command": "python3",
     "args": [os.path.join(here, "mcp-server.py")],
-    "env": {"CONSUMER_GRAPH_DB": os.path.expanduser("~/consumer-out/consumer.sqlite3")},
+    "env": {"BRADAN_GRAPH_DB": os.path.expanduser("~/consumer-out/consumer.sqlite3")},
 }
 json.dump(cfg, open(path, "w"), indent=2)
 print("  workspace mcp.json updated (consumer-mcp registered)")

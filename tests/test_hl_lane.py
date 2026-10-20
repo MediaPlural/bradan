@@ -101,8 +101,8 @@ class Unit(unittest.TestCase):
         self.tmp = tempfile.TemporaryDirectory()
         # isolate the segmented creds root per test, then reload so the
         # module's TOKEN_PATH points at this test's store
-        os.environ["CONSUMER_CREDS_ROOT"] = self.tmp.name
-        os.environ.pop("CONSUMER_HL_TOKEN", None)
+        os.environ["BRADAN_CREDS_ROOT"] = self.tmp.name
+        os.environ.pop("BRADAN_HL_TOKEN", None)
         global hl_course
         hl_course = _reload_hl()
         self.stub = StubTransport()
@@ -289,10 +289,10 @@ class TestCourseMap(Unit):
 class TestHonestStatus(Unit):
 
     def run_status_with_no_token(self):
-        os.environ.pop("CONSUMER_HL_TOKEN", None)
+        os.environ.pop("BRADAN_HL_TOKEN", None)
         root = os.path.join(self.tmp.name, "empty-creds")
         os.makedirs(os.path.join(root, "highlevel"), exist_ok=True)
-        os.environ["CONSUMER_CREDS_ROOT"] = root
+        os.environ["BRADAN_CREDS_ROOT"] = root
         # reload module state under the isolated creds root
         import importlib
         global hl_course
@@ -316,8 +316,8 @@ class TestHonestStatus(Unit):
         self.assertNotIn(TOKEN, json.dumps(out))
 
     def test_require_token_exits_with_remediation_when_absent(self):
-        os.environ.pop("CONSUMER_HL_TOKEN", None)
-        os.environ["CONSUMER_CREDS_ROOT"] = os.path.join(self.tmp.name, "x2")
+        os.environ.pop("BRADAN_HL_TOKEN", None)
+        os.environ["BRADAN_CREDS_ROOT"] = os.path.join(self.tmp.name, "x2")
         import importlib
         global hl_course
         hl_course = importlib.reload(hl_course)
@@ -334,7 +334,7 @@ class TestHonestStatus(Unit):
 
     def test_status_zero_when_token_present(self):
         root = self.token_present()
-        os.environ["CONSUMER_CREDS_ROOT"] = root
+        os.environ["BRADAN_CREDS_ROOT"] = root
         import importlib
         global hl_course
         hl_course = importlib.reload(hl_course)
@@ -350,8 +350,8 @@ class TestHonestStatus(Unit):
         self.assertNotIn(TOKEN, buf.getvalue())
 
     def test_env_token_fallback_documented(self):
-        os.environ["CONSUMER_HL_TOKEN"] = "env-tok"
-        os.environ["CONSUMER_CREDS_ROOT"] = os.path.join(self.tmp.name, "x3")
+        os.environ["BRADAN_HL_TOKEN"] = "env-tok"
+        os.environ["BRADAN_CREDS_ROOT"] = os.path.join(self.tmp.name, "x3")
         import importlib
         global hl_course
         hl_course = importlib.reload(hl_course)

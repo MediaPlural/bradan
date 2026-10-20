@@ -28,7 +28,7 @@ def main():
     ap.add_argument("--audio-only", action="store_true", default=True)
     ap.add_argument("--keep-video", dest="audio_only", action="store_false")
     ap.add_argument("--venv-python", default=os.environ.get(
-        "CONSUMER_VENV_PYTHON", os.path.expanduser("~/.hermes/venvs/consumer/bin/python")))
+        "BRADAN_VENV_PYTHON", os.path.expanduser("~/.hermes/venvs/bradan/bin/python")))
     a = ap.parse_args()
 
     root = os.path.abspath(os.path.join("consumer-out", a.tag))

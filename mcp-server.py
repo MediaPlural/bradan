@@ -16,8 +16,8 @@ import subprocess
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-DEFAULT_VENV = os.environ.get("CONSUMER_VENV_PYTHON",
-                              os.path.expanduser("~/.hermes/venvs/consumer/bin/python"))
+DEFAULT_VENV = os.environ.get("BRADAN_VENV_PYTHON",
+                              os.path.expanduser("~/.hermes/venvs/bradan/bin/python"))
 
 TOOLS = [
     {

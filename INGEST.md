@@ -34,7 +34,7 @@ pipeline:
 ## Quick start for agents
 
 ```bash
-bash install.sh && export CONSUMER_VENV_PYTHON=~/.hermes/venvs/consumer/bin/python
+bash install.sh && export BRADAN_VENV_PYTHON=~/.hermes/venvs/bradan/bin/python
 python3 scrape.py "URL" --out-dir ./course/media --audio-only
 python3 transcribe.py ./course/media/FILE --out-dir ./course/transcripts
 python3 distill.py ./course/transcripts --out-dir ./course/distilled

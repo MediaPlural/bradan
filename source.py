@@ -213,7 +213,7 @@ def main():
     ap.add_argument("--workspace", default="./consumer-workspace")
     ap.add_argument("--full", action="store_true",
                     help="chain ingest + graph automatically (the engine path)")
-    ap.add_argument("--db", default=os.environ.get("CONSUMER_GRAPH_DB", "consumer.graph.db"))
+    ap.add_argument("--db", default=os.environ.get("BRADAN_GRAPH_DB", "consumer.graph.db"))
     a = ap.parse_args()
     kind, ingest_dir = resolve_source(a.source, a.workspace)
     out = {"ok": True, "kind": kind, "ingest_dir": os.path.abspath(ingest_dir),
@@ -236,8 +236,8 @@ def main():
         media = [e for e in ing.get("files_list", []) if e.get("needs_transcription")]
         transcript_dir = None
         if media:
-            venv = os.environ.get("CONSUMER_VENV_PYTHON",
-                                  os.path.expanduser("~/.hermes/venvs/consumer/bin/python"))
+            venv = os.environ.get("BRADAN_VENV_PYTHON",
+                                  os.path.expanduser("~/.hermes/venvs/bradan/bin/python"))
             transcript_dir = os.path.join(os.path.dirname(ingest_dir), "transcripts")
             os.makedirs(transcript_dir, exist_ok=True)
             done = 0

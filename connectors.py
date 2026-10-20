@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""consumer connectors — "consume my <app> archive" via real auth (OAuth/IMAP).
+"""bradan connectors — "consume my <app> archive" via real auth (OAuth/IMAP).
 
 The agent-native app layer: every connector knows how to (1) AUTHENTICATE —
 via ortie (the OAuth token manager) or an
@@ -44,9 +44,9 @@ def nango_token(connection_id, nango_url=None, nango_key=None):
     custody). Never a SaaS token: the consumer's integration law is local
     custody; Nango is adopted as optional prebuilt-OAuth plumbing for the
     long tail of apps we won't hand-wire. URL from env or --nango-url; the
-    secret key lives in env CONSUMER_NANGO_KEY (never argv)."""
-    url = nango_url or os.environ.get("CONSUMER_NANGO_URL")
-    key = nango_key or os.environ.get("CONSUMER_NANGO_KEY")
+    secret key lives in env BRADAN_NANGO_KEY (never argv)."""
+    url = nango_url or os.environ.get("BRADAN_NANGO_URL")
+    key = nango_key or os.environ.get("BRADAN_NANGO_KEY")
     if not url or not key:
         return None
     req = urllib.request.Request(
@@ -160,17 +160,17 @@ def gmail_export(account, since, out_dir, db, limit):
 
 def imap_export(host, user, out_dir, db, limit, folder):
     """Any IMAP mailbox with an app password. Password NEVER on the command
-    line: read from env CONSUMER_IMAP_PASS or macOS keychain (security find-
+    line: read from env BRADAN_IMAP_PASS or macOS keychain (security find-
     generic-password -s consumer-imap)."""
     import imaplib
     import email as email_lib
-    pw = os.environ.get("CONSUMER_IMAP_PASS")
+    pw = os.environ.get("BRADAN_IMAP_PASS")
     if not pw:
         r = subprocess.run(["security", "find-generic-password", "-s", "consumer-imap", "-w"],
                            capture_output=True, text=True, timeout=30)
         pw = (r.stdout or "").strip() or None
     if not pw:
-        sys.exit("FATAL: no IMAP password — set CONSUMER_IMAP_PASS or store it:\n"
+        sys.exit("FATAL: no IMAP password — set BRADAN_IMAP_PASS or store it:\n"
                  "  security add-generic-password -s consumer-imap -a you@gmail.com -w")
     os.makedirs(out_dir, exist_ok=True)
     M = imaplib.IMAP4_SSL(host)
@@ -226,7 +226,7 @@ def drive_export(account, out_dir, db, limit, query):
     tok = ortie_token(account) or nango_token("google-drive")
     if not tok:
         sys.exit("FATAL: no google token — run ortie configure with Drive scopes, "
-                 "or set CONSUMER_NANGO_URL/KEY for a Nango google-drive connection")
+                 "or set BRADAN_NANGO_URL/KEY for a Nango google-drive connection")
     os.makedirs(out_dir, exist_ok=True)
     q = urllib.request.quote(query)
     url = (f"https://www.googleapis.com/drive/v3/files?q={q}"

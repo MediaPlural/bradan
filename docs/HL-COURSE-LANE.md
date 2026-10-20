@@ -48,8 +48,8 @@ python3 hl_course.py map PRODUCT_ID --location-id LOCATION_ID [--out-dir DIR]
 
 ## Credentials (segmented store law)
 
-Token path: `~/.consumer/creds/highlevel/token` (env `CONSUMER_CREDS_ROOT`
-relocates the root). Env `CONSUMER_HL_TOKEN` is the documented fallback.
+Token path: `~/.consumer/creds/highlevel/token` (env `BRADAN_CREDS_ROOT`
+relocates the root). Env `BRADAN_HL_TOKEN` is the documented fallback.
 
 - HighLevel location-scoped token (OAuth "sub-account token" or Private
   Integration token), scope **`courses.readonly`**.
@@ -65,13 +65,13 @@ python3 hl_course.py status
   "authorized": false,
   "token_file": "~/.consumer/creds/highlevel/token",
   "token_file_present": false,
-  "token_env": "CONSUMER_HL_TOKEN",
+  "token_env": "BRADAN_HL_TOKEN",
   "token_env_set": false,
   "rate_limit_per_min": 80,
   "note": "token values are never printed",
   "remediation": "place the HighLevel location token (scope
   courses.readonly) at ~/.consumer/creds/highlevel/token, or export
-  CONSUMER_HL_TOKEN. See docs/HL-COURSE-LANE.md"
+  BRADAN_HL_TOKEN. See docs/HL-COURSE-LANE.md"
 }
 ```
 

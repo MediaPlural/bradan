@@ -18,8 +18,8 @@ Ingest contract (dossier §3):
   API-readable (dossier §1.4/§3.4) — the cookie crawl stays mandatory.
 
 Auth (segmented store, creds.py law):
-  Token at ~/.consumer/creds/highlevel/token (env CONSUMER_CREDS_ROOT
-  relocates the root), or env CONSUMER_HL_TOKEN as documented fallback.
+  Token at ~/.consumer/creds/highlevel/token (env BRADAN_CREDS_ROOT
+  relocates the root), or env BRADAN_HL_TOKEN as documented fallback.
   Bearer auth, Version: v3 header, scope courses.readonly.
   The token is NEVER printed, logged, or echoed — including in errors
   (HTTP errors are re-raised with the query string stripped).
@@ -43,10 +43,10 @@ import urllib.parse
 import urllib.request
 
 BASE_URL = "https://services.leadconnectorhq.com"
-CREDS_ROOT = os.environ.get("CONSUMER_CREDS_ROOT",
+CREDS_ROOT = os.environ.get("BRADAN_CREDS_ROOT",
                             os.path.expanduser("~/.consumer/creds"))
 TOKEN_PATH = os.path.join(CREDS_ROOT, "highlevel", "token")
-TOKEN_ENV = "CONSUMER_HL_TOKEN"
+TOKEN_ENV = "BRADAN_HL_TOKEN"
 RATE_LIMIT_PER_MIN = 80          # published per-location ceiling (dossier §0)
 PAGE_LIMIT = 50                  # v3 products/lessons limit is 1-50 [SPEC]
 MAX_PAGES = 200                 # pagination runaway guard

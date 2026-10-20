@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""consumer ingest — universal local-file text extractor for course content.
+"""bradan ingest — universal local-file text extractor for course content.
 
 Input: any file (or a directory — recursive). Output: normalized .txt next to
 the source (in --out-dir), plus corpus.json entries with provenance.

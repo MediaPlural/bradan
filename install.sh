@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # consumer install — isolated transcription + acquisition venv (no system pollution).
 # macOS/Apple Silicon: mlx-whisper (GPU via MLX). Linux/other: faster-whisper (CPU).
-# Usage: bash install.sh [venv-dir]   (default ~/.hermes/venvs/consumer)
+# Usage: bash install.sh [venv-dir]   (default ~/.hermes/venvs/bradan)
 set -euo pipefail
 
-VENV_DIR="${1:-$HOME/.hermes/venvs/consumer}"
+VENV_DIR="${1:-$HOME/.hermes/venvs/bradan}"
 PY_MINOR=3.11
 
 say() { printf '[install] %s\n' "$*"; }
@@ -62,7 +62,7 @@ cat <<EOF
 
 DONE. Backend: $BACKEND
 Set it for every run:
-  export CONSUMER_VENV_PYTHON="$VENV_DIR/bin/python"
+  export BRADAN_VENV_PYTHON="$VENV_DIR/bin/python"
 or pass --venv-python per call. transcribe.py picks the backend automatically.
 
 Quick test:

@@ -291,7 +291,7 @@ def main():
     ap.add_argument("--header", action="append", default=[], help="extra header, e.g. --header 'Cookie: k=1' (repeatable)")
     ap.add_argument("--max-pages", type=int, default=200)
     ap.add_argument("--venv-python", default=os.environ.get(
-        "CONSUMER_VENV_PYTHON", os.path.expanduser("~/.hermes/venvs/consumer/bin/python")))
+        "BRADAN_VENV_PYTHON", os.path.expanduser("~/.hermes/venvs/bradan/bin/python")))
     a = ap.parse_args()
 
     headers = {}

@@ -169,8 +169,8 @@ def main():
     a = ap.parse_args()
 
     venv = a.venv_python or os.environ.get(
-        "CONSUMER_VENV_PYTHON",
-        os.path.expanduser("~/.hermes/venvs/consumer/bin/python"))
+        "BRADAN_VENV_PYTHON",
+        os.path.expanduser("~/.hermes/venvs/bradan/bin/python"))
     if not os.path.exists(venv):
         sys.exit(f"FATAL: interpreter not found: {venv}\nRun install.sh first.")
     if not os.path.exists(a.source):

@@ -30,7 +30,7 @@ Every stage is idempotent and provenance-anchored: the sha256 of the source medi
 
 ```bash
 bash install.sh            # creates an isolated venv (mlx-whisper on Apple Silicon, faster-whisper elsewhere)
-export CONSUMER_VENV_PYTHON=~/.hermes/venvs/consumer/bin/python
+export BRADAN_VENV_PYTHON=~/.hermes/venvs/bradan/bin/python
 ```
 
 Alternative venv dirs are fine: `bash install.sh ~/my-venv` then pass `--venv-python`.

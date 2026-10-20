@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""consumer trial — platform-trial lifecycle manager.
+"""bradan trial — platform-trial lifecycle manager.
 
 Consume a course platform's trial honestly and completely, without ever
 forgetting to cancel: register a trial (with its renewal date), track the

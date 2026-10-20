@@ -28,9 +28,9 @@ installed on this machine; when it lands, `install-everywhere.sh` picks it up.
 Any remote agent can use the engine via:
 
 1. The MCP stdio server: `python3 mcp-server.py` (tools: source, transcribe,
-   scrape, distill, graph_query; graph db via CONSUMER_GRAPH_DB env)
+   scrape, distill, graph_query; graph db via BRADAN_GRAPH_DB env)
 2. The HTTP API: `api.py` (8 routes; /search /semantic /hybrid /filter
-   /insight /maths /export /status + POST /ingest; env CONSUMER_GRAPH_DB selects db)
+   /insight /maths /export /status + POST /ingest; env BRADAN_GRAPH_DB selects db)
 3. Direct CLI over ssh
 
 ## Laws (apply to every runtime adapter)

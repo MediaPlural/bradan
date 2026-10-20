@@ -76,6 +76,119 @@ def test_distiller():
     check("concept bigram freq", cons.count("funnel machine") == 2, cons)
 
 
+def _load_distill():
+    sys.path.insert(0, HERE)
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("di", os.path.join(HERE, "distill.py"))
+    di = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(di)
+    return di
+
+
+def test_distill_deep_units():
+    print("distiller deep layer (unit, no network)")
+    di = _load_distill()
+
+    # canon + tolerant JSON extraction
+    check("canon", di.canon("  Funnel   Machine! ") == "funnel machine")
+    d = di.extract_json('noise before {"a": 1, "b": "x { not }"} and after')
+    check("extract_json tolerant", d == {"a": 1, "b": "x { not }"}, str(d))
+
+    # normalize clamps malformed model output instead of failing the chunk
+    ext = di.normalize_extraction(
+        {"concepts": [{"name": "Offer Call"}, {"name": "the thing"}, 42],
+         "edges": [{"from": "offer call", "to": "ghost", "relation": "prerequisite"},
+                   {"from": "offer call", "to": "not listed", "relation": "prerequisite"},
+                   {"from": "offer call", "to": "offer call", "relation": "prerequisite"}],
+         "takeaways": ["tiny", "A real takeaway sentence lives here."],
+         "caveats": "not-a-list", "decisions": []},
+        "chunk text")
+    check("normalize drops malformed", len(ext["concepts"]) == 1
+          and ext["concepts"][0]["name"] == "offer call", str(ext["concepts"]))
+    check("normalize drops edges to unknowns", ext["edges"] == [], str(ext["edges"]))
+    check("normalize keeps real takeaway", ext["takeaways"] == ["A real takeaway sentence lives here."])
+
+    # chunk caching: second identical call never touches the model
+    class FakeClient:
+        model = "fake-model"
+        calls = 0
+        def complete(self, prompt):
+            self.calls += 1
+            return json.dumps({"concepts": [{"name": "funnel machine", "definition": "d"}],
+                               "edges": [], "takeaways": ["t one"], "caveats": [], "decisions": []})
+    cache = {"chunks": {}, "synthesis": {}}
+    fake = FakeClient()
+    e1 = di.distill_chunk_llm(fake, "some chunk of transcript", "l01.txt", cache)
+    e2 = di.distill_chunk_llm(fake, "some chunk of transcript", "l01.txt", cache)
+    check("chunk cache idempotent", fake.calls == 1 and e2.get("_cached") is True,
+          f"calls={fake.calls}")
+    check("chunk extraction has sha anchor", len(e1["chunk_sha256"]) == 64)
+
+    # merge: case-folded duplicates become one node with provenance; edges weight
+    exts = [{"concepts": [{"name": "funnel machine", "definition": "d1"},
+                          {"name": "reply speed", "definition": "d2"}],
+             "edges": [{"from": "reply speed", "to": "funnel machine", "relation": "prerequisite"}],
+             "takeaways": [], "caveats": [], "decisions": [],
+             "chunk_sha256": "a" * 64, "_source": "l01.transcript.json"},
+            {"concepts": [{"name": "Funnel Machine", "definition": ""}],
+             "edges": [{"from": "reply speed", "to": "funnel machine", "relation": "prerequisite"}],
+             "takeaways": [], "caveats": [], "decisions": [],
+             "chunk_sha256": "b" * 64, "_source": "l02.transcript.json"}]
+    g = di.merge_extractions(exts)
+    fm = [n for n in g["nodes"] if n["name"] == "funnel machine"][0]
+    check("merge dedupes by canon", len(g["nodes"]) == 2 and fm["count"] == 2, str(g["nodes"]))
+    check("merge keeps provenance", fm["sources"] == ["l01.transcript.json", "l02.transcript.json"]
+          and len(fm["chunks"]) == 2, str(fm))
+    check("merge edge weight", g["edges"] == [{"from": "reply speed", "to": "funnel machine",
+          "relation": "prerequisite", "weight": 2,
+          "sources": ["l01.transcript.json", "l02.transcript.json"]}], str(g["edges"]))
+
+    # learning path: prerequisites come first ("reply speed" precedes "funnel machine")
+    path = di.learning_path(g)
+    check("learning path topo", path.index("reply speed") < path.index("funnel machine"), str(path))
+
+
+def test_distill_deep_cli():
+    print("distiller deep layer (CLI, --llm none)")
+    tmp = tempfile.mkdtemp()
+    tr = os.path.join(tmp, "transcripts")
+    dist = os.path.join(tmp, "distilled")
+    os.makedirs(tr)
+    for i, text in enumerate([
+            "The funnel machine is a system that decides the next move. "
+            "Reply speed beats clever copy every time. The funnel machine needs a reply under five minutes. " * 8,
+            "Booking the audit call is the goal of the funnel machine. "
+            "If the offer is unclear the funnel machine stalls, that is the edge case most people hit. " * 8]):
+        json.dump({"text": text, "segments": [{"start": 0.0, "end": 60.0 * (i + 1), "text": "s"}]},
+                  open(os.path.join(tr, f"l{i:02d}.transcript.json"), "w"))
+    r = run([PY, os.path.join(HERE, "distill.py"), tr, "--out-dir", dist, "--llm", "none"])
+    check("distill --llm none runs", r.returncode == 0, r.stderr[:300])
+    check("concept-graph written", os.path.exists(os.path.join(dist, "concept-graph.json")))
+    check("synthesis written", os.path.exists(os.path.join(dist, "synthesis.json")))
+    g = json.load(open(os.path.join(dist, "concept-graph.json")))
+    check("graph schema", g["schema"] == "concept-graph/bradan-v1")
+    check("graph fallback provenance", g["provenance"]["llm"] is None)
+    check("graph sources sha-anchored",
+          all(len(s["sha256"]) == 64 for s in g["provenance"]["sources"]))
+    check("graph has nodes+edges", len(g["nodes"]) >= 2 and len(g["edges"]) >= 1,
+          f"nodes={len(g['nodes'])} edges={len(g['edges'])}")
+    check("fallback edges are co-occurs",
+          all(e["relation"] == "co-occurs" for e in g["edges"]))
+    s = json.load(open(os.path.join(dist, "synthesis.json")))
+    check("synthesis schema", s["schema"] == "synthesis/bradan-v1" and "learning_path" in s)
+    cmap = open(os.path.join(dist, "course-map.md")).read()
+    check("course map renders graph", "## Concept graph" in cmap and "sha256" in cmap)
+    check("legacy artifacts kept", os.path.exists(os.path.join(dist, "keywords.json"))
+          and os.path.exists(os.path.join(dist, "next-best-seeds.json")))
+    # idempotent re-run: same inputs, same graph shape
+    r2 = run([PY, os.path.join(HERE, "distill.py"), tr, "--out-dir", dist, "--llm", "none"])
+    g2 = json.load(open(os.path.join(dist, "concept-graph.json")))
+    check("re-run idempotent", r2.returncode == 0
+          and [n["name"] for n in g2["nodes"]] == [n["name"] for n in g["nodes"]]
+          and len(g2["edges"]) == len(g["edges"]))
+    shutil.rmtree(tmp, ignore_errors=True)
+
+
 def test_scrape_manifest():
     print("scrape manifest (unit)")
     tmp = tempfile.mkdtemp()
@@ -583,6 +696,8 @@ def main():
     test_cli_shapes()
     test_srt_and_fingerprint()
     test_distiller()
+    test_distill_deep_units()
+    test_distill_deep_cli()
     test_scrape_manifest()
     test_mcp_dispatch()
     test_course_dl_skool()

@@ -128,7 +128,7 @@ class Handler(BaseHTTPRequestHandler):
 def main():
     global DB
     ap = argparse.ArgumentParser(description="The knowledge graph over HTTP — API to everywhere")
-    ap.add_argument("--db", default=os.environ.get("CONSUMER_GRAPH_DB", "consumer.graph.db"))
+    ap.add_argument("--db", default=os.environ.get("BRADAN_GRAPH_DB", "consumer.graph.db"))
     ap.add_argument("--port", type=int, default=8765)
     ap.add_argument("--host", default="127.0.0.1",
                     help="127.0.0.1 (default, local only) or 0.0.0.0 (LAN — deliberate)")
@@ -137,7 +137,7 @@ def main():
         sys.exit(f"FATAL: no graph at {a.db} — run: graph.py ingest <corpus_dir> --db {a.db}")
     DB = a.db
     srv = ThreadingHTTPServer((a.host, a.port), Handler)
-    print(f"[api] consumer graph on http://{a.host}:{a.port}  db={os.path.abspath(DB)}",
+    print(f"[api] bradan graph on http://{a.host}:{a.port}  db={os.path.abspath(DB)}",
           file=sys.stderr)
     print("[api] routes: /search /semantic /hybrid /filter /insight /maths /export /status",
           file=sys.stderr)

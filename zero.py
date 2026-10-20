@@ -91,7 +91,7 @@ def main():
     ap = argparse.ArgumentParser(description="Zero-in: consume exactly what you're looking at")
     ap.add_argument("kind", nargs="?", default="region",
                     choices=["region", "window", "fullscreen", "clip"])
-    ap.add_argument("--db", default=os.environ.get("CONSUMER_GRAPH_DB", "consumer.graph.db"))
+    ap.add_argument("--db", default=os.environ.get("BRADAN_GRAPH_DB", "consumer.graph.db"))
     ap.add_argument("--keep", default=None, help="dir to keep the screenshot (default ~/.consumer/zero/)")
     ap.add_argument("--label", default=None, help="what this capture is (becomes the source name)")
     a = ap.parse_args()

@@ -36,7 +36,7 @@ import sys
 import time
 import urllib.request
 
-CREDS_ROOT = os.environ.get("CONSUMER_CREDS_ROOT",
+CREDS_ROOT = os.environ.get("BRADAN_CREDS_ROOT",
                             os.path.expanduser("~/.consumer/creds"))
 
 

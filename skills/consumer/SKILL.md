@@ -51,7 +51,7 @@ One engine, every runtime. This SKILL.md speaks the AgentSkills dialect
 below for non-AgentSkills runtimes (VS Code/Copilot via MCP, any MCP client).
 
 Repo: `https://github.com/MediaPlural/bradan` (MIT). Local checkout:
-run `CONSUMER_HOME` discovery below; default `~/consumer`, or
+run `BRADAN_HOME` discovery below; default `~/consumer`, or
 `tools/consumer` inside a repo worktree.
 
 ## Universal invocation law
@@ -72,9 +72,9 @@ differences are only HOW tools are called:
 The engine is a directory with bank.py/graph.py/ingest.py. Find it:
 
 ```
-[ -d "$HOME/consumer" ] && CONSUMER_HOME="$HOME/consumer"
-[ -d "tools/consumer" ] && CONSUMER_HOME="tools/consumer"
-[ -z "$CONSUMER_HOME" ] && CONSUMER_HOME=$(find ~ -maxdepth 3 -name bank.py \
+[ -d "$HOME/consumer" ] && BRADAN_HOME="$HOME/consumer"
+[ -d "tools/consumer" ] && BRADAN_HOME="tools/consumer"
+[ -z "$BRADAN_HOME" ] && BRADAN_HOME=$(find ~ -maxdepth 3 -name bank.py \
     -path "*/consumer/bank.py" 2>/dev/null | head -1 | xargs dirname)
 ```
 
@@ -97,7 +97,7 @@ python3 source.py screen --live --interval 5   # live screen watch
 ```
 
 Local STT: `transcribe.py` (MLX Whisper large-v3-turbo pinned rev, isolated
-venv at ~/.hermes/venvs/consumer; scrub PYTHONPATH/VIRTUAL_ENV/CONDA in child
+venv at ~/.hermes/venvs/bradan; scrub PYTHONPATH/VIRTUAL_ENV/CONDA in child
 envs; ffmpeg on PATH). OCR lane: `ocr.py` for image-born content. Bank
 connectors: `bank.py list/status/consume/act` (gmail/imap/drive/skool/http/
 zero-in; community manifests bank/connectors/\*.json; SAFE runner: shlex-quoted,
@@ -140,7 +140,7 @@ affordance with visible/hidden/locked states (honest no-backend stub).
 --location-id` / `status`. Courses v3 (Version:v3 header, Bearer, per-category
 lesson fetches, cursor pagination, 80/min limiter); emits a course-dl-compatible
 ingest dir + course-map.json with UUIDs/sequence/lock state. Token ONLY from
-~/.consumer/creds/highlevel/token or CONSUMER_HL_TOKEN env — never printed;
+~/.consumer/creds/highlevel/token or BRADAN_HL_TOKEN env — never printed;
 `status` exits 1 with exact remediation when absent (build honest-needs-auth,
 verify via mocked-transport tests, never fake 200s). Drip day-counts are NOT
 API-readable — emit null with a note, don't invent numbers.
@@ -160,7 +160,7 @@ consumer` (created by install-everywhere.sh; OpenClaw not yet installed on
   See `docs/RUNTIMES.md` for full layout.
 - **Any MCP client** (incl. remote agents): `consumer-mcp` stdio server,
   `python3 mcp-server.py`, 5 tools (source, transcribe, scrape, distill,
-  graph_query). Graph db: `$CONSUMER_GRAPH_DB` (default `consumer.graph.db`).
+  graph_query). Graph db: `$BRADAN_GRAPH_DB` (default `consumer.graph.db`).
 
 ## Laws
 
